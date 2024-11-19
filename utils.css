@@ -1,0 +1,141 @@
+
+/* ? THIS CSS STYLE IS USED IN ALL PAGES. MEANING; THE STYLES APPLY ON DIFFERENT PAGES zzzzzzzzzzzzzzzzzzzzz */
+:root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 346.8 77.2% 49.8%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 346.8 77.2% 49.8%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+
+    --screen-lg: 1284px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #EED3B1;
+}
+
+.screen-lg {
+    max-width: var(--screen-lg);
+    margin: auto 0;
+}
+
+.logo-size {
+    width: 75px;
+    height: 75px;
+}
+
+.section-wrapper {
+    max-width: var(--screen-lg);
+    margin: 0 auto;
+    padding: 80px 10rem;
+}
+
+header {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999999999;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 24px;
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+
+        img {
+            border-radius: 100%;
+        }
+    }
+
+    nav {
+        /* * FIXED POSITION zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz */
+        display: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        ul {
+            list-style: none;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+
+            li {
+                a {
+                    color: hsl(var(--primary-foreground));
+                    text-decoration: none;
+
+                    &:hover {
+                        color: hsla(var(--foreground));
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    padding: 12px 24px;
+    z-index: 9999999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@keyframes float-up {
+    from {
+        transform: translate(0, 20px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0, 0px);
+        opacity: 1;
+    }
+}

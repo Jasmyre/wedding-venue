@@ -1,0 +1,82 @@
+body {
+	/* * STATIC POSITION zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz */
+	position: static;
+}
+
+main {
+	#hero-section {
+		background-position: center;
+		background-size: cover;
+		position: relative;
+
+		div {
+			min-height: 80vh;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: start;
+			gap: 1rem;
+
+			> * {
+				z-index: 2;
+				color: white;
+				text-align: center;
+				padding: 0;
+				margin: 0;
+			}
+
+			h1 {
+				font-size: 55px;
+				animation: float-up 1s ease;
+				background: url(../assets/main-page-hero.jpg), black;
+				background-clip: text;
+				color: transparent;
+			}
+
+			p {
+				animation: float-up 1s ease;
+			}
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+				filter: brightness(25%);
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+	}
+
+	#venue-section {
+		div.section-wrapper {
+			display: flex;
+			flex-direction: column;
+			gap: 50px;
+
+			.venue-section-content {
+				display: flex;
+				flex-direction: column;
+				justify-content: start;
+				gap: 50px;
+
+				.venue {
+					.venue-img-wrapper {
+						display: flex;
+						justify-content: start;
+						align-items: center;
+
+						img {
+							width: 500px;
+							aspect-ratio: 16 / 9;
+						}
+					}
+				}
+			}
+		}
+	}
+}
